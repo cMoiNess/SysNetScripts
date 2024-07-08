@@ -5,7 +5,7 @@
 Import-Module ActiveDirectory
 
 # Set the number of days to check for password expiration
-$daysUntilExpiration = 5
+$daysUntilExpiration = 90
 
 # Get current date
 $currentDate = Get-Date
