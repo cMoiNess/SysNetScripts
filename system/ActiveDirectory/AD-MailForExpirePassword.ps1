@@ -1,4 +1,5 @@
 # Send an email to users whose password will expire soon. Send the email every day until the change or expiration.
+# It is recommended to deploy this script with Task Scheduler
 
 # Import Active Directory module
 Import-Module ActiveDirectory
