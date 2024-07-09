@@ -8,7 +8,7 @@ $inactiveDate = (Get-Date).AddDays(-$daysInactive)
 # Find inactive users
 $inactiveUsers = Get-ADUser -Filter {LastLogonDate -lt $inactiveDate} -Properties LastLogonDate
 
-# Show results in console with Write-Host
+# Show results in console
 $inactiveUsers | ForEach-Object {
     $name = $_.Name
     $userPrincipalName = $_.UserPrincipalName
