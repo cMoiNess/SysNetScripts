@@ -1,7 +1,7 @@
-# Définir les groupes d'administrateurs à vérifier
+# Define the administrator groups to check
 $adminGroups = @("Administrators", "Domain Admins", "Enterprise Admins", "Schema Admins")
 
-# Parcourir chaque groupe et lister les membres
+# Browse each group and list members
 foreach ($group in $adminGroups) {
     Get-ADGroupMember -Identity $group | Select-Object Name,SamAccountName,DistinguishedName, @{Name="Group";Expression={$group}}
 }
